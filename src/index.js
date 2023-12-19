@@ -6,7 +6,7 @@ imgHid = document.querySelectorAll('.card__img'),
 cardDescHid = document.querySelectorAll('.card__description'),
 cardDesc = document.querySelectorAll('.card__back_description'),
 cardUnion = document.querySelectorAll('.card__union'),
-btn = document.getElementById('btn');
+btn = document.querySelector('.main__btn_continue');
 
 cards.forEach(function (item, index) {
     item.addEventListener('click', function () {
