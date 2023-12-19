@@ -21,13 +21,6 @@ cards.forEach(function (item, index) {
 })
 
 function checkCards() {
-    let allCardsClicked = true;
-    cards.forEach(function (item) {
-        if (!item.classList.contains('checked')) {
-            allCardsClicked = false;
-        }
-    });
-    if (allCardsClicked) {
-        btn.disabled = false;
-    }
+    let checked = document.querySelectorAll('.card.checked').length;
+    cards.length === checked ? btn.disabled = false : '';
 }
