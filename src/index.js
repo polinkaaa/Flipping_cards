@@ -2,6 +2,7 @@ import 'normalize.css';
 import './styles/main.scss';
 
 const cards = document.querySelectorAll('.card'),
+cardTitle = document.querySelectorAll('.card__title'),
 imgHid = document.querySelectorAll('.card__img'),
 cardDescHid = document.querySelectorAll('.card__description'),
 cardDesc = document.querySelectorAll('.card__back_description'),
@@ -16,6 +17,11 @@ cards.forEach(function (item, index) {
         cardUnion[index].classList.toggle('svg_back');
         item.classList.add('checked');
         item.classList.toggle('flipped');
+        if (item.classList.contains('flipped')) {
+            cardTitle[index].style.transform = "rotateY(180deg)";
+        } else {
+            cardTitle[index].style.transform = "rotateY(0deg)";
+        }
         checkCards();
     });
 })
